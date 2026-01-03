@@ -1,4 +1,4 @@
-import { Home, Inbox, Calendar, Search, Settings, User2, ChevronUp } from "lucide-react"
+import { Home, CircleDollarSign, Calendar, Search, Settings, User2, ChevronUp } from "lucide-react"
 import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarSeparator } from "./ui/sidebar"
 import Link from "next/link"
 import Image from "next/image"
@@ -9,29 +9,29 @@ import { DropdownMenuTrigger } from "@radix-ui/react-dropdown-menu"
 const sidebarMenuItems = [
     {
         title: "Home",
-        url: "#",
+        url: "/",
         icon: Home,
     },
     {
-        title: "Inbox",
-        url: "#",
-        icon: Inbox,
+        title: "Payments",
+        url: "/payments",
+        icon: CircleDollarSign,
     },
-    {
-        title: "Calendar",
-        url: "#",
-        icon: Calendar,
-    },
-    {
-        title: "Search",
-        url: "#",
-        icon: Search,
-    },
-    {
-        title: "Settings",
-        url: "#",
-        icon: Settings,
-    },
+    // {
+    //     title: "Calendar",
+    //     url: "#",
+    //     icon: Calendar,
+    // },
+    // {
+    //     title: "Search",
+    //     url: "#",
+    //     icon: Search,
+    // },
+    // {
+    //     title: "Settings",
+    //     url: "#",
+    //     icon: Settings,
+    // },
 ]
 
 const AppSidebar = () => {
@@ -52,7 +52,7 @@ const AppSidebar = () => {
             <SidebarSeparator />
             <SidebarContent>
                 <SidebarGroup>
-                    <SidebarGroupLabel>Application</SidebarGroupLabel>
+                    {/* <SidebarGroupLabel>Application</SidebarGroupLabel> */}
                     <SidebarGroupContent>
                         <SidebarMenu>
                             {sidebarMenuItems.map((item) => (
@@ -79,7 +79,9 @@ const AppSidebar = () => {
                                 </SidebarMenuButton>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end">
-                                <DropdownMenuItem>Account</DropdownMenuItem>
+                                <Link href="/users/bishnu.p.chanda">
+                                    <DropdownMenuItem>Account</DropdownMenuItem>
+                                </Link>
                                 <DropdownMenuItem>Settings</DropdownMenuItem>
                                 <DropdownMenuItem>Logout</DropdownMenuItem>
                             </DropdownMenuContent>

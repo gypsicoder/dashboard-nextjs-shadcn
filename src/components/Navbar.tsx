@@ -47,9 +47,11 @@ const Navbar = () => {
                     <DropdownMenuContent sideOffset={10}>
                         <DropdownMenuLabel>My Account</DropdownMenuLabel>
                         <DropdownMenuSeparator />
-                        <DropdownMenuItem>
-                            <User className="w-[1.3rem] h-[1.3rem] mr-2"/>Profile
-                        </DropdownMenuItem>
+                            <Link href="/users/bishnu.p.chanda">
+                                <DropdownMenuItem>
+                                    <User className="w-[1.3rem] h-[1.3rem] mr-2"/>Profile
+                                </DropdownMenuItem>
+                            </Link>
                         <DropdownMenuItem>
                             <Settings className="w-[1.3rem] h-[1.3rem] mr-2"/>Settings
                         </DropdownMenuItem>
