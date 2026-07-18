@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📊 Dashboard App — Next.js + shadcn/ui
+
+An admin dashboard application built with Next.js, TypeScript, shadcn/ui, and TailwindCSS. Features revenue analytics, transaction tracking, visitor charts, todo management, and a paginated payments table with filtering.
+
+![Next.js](https://img.shields.io/badge/Next.js-black?logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-blue?logo=typescript&logoColor=white)
+![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-black?logo=shadcnui)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?logo=tailwindcss&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-black?logo=vercel)
+
+🔗 **[Live Demo](https://dashboard-nextjs-shadcn-navy.vercel.app/)**
+
+---
+
+## Pages
+
+| Page | Route | What it shows |
+|------|-------|---------------|
+| **Dashboard** | `/` | Revenue cards, latest transactions, visitor charts, todo list, popular content |
+| **Payments** | `/payments` | Paginated data table with status filters, row selection, and action menus |
+
+---
+
+## Features
+
+- **Revenue Analytics** — Total revenue card with summary metrics
+- **Transactions Feed** — Latest transactions with user avatars, descriptions, and amounts
+- **Visitor Charts** — Interactive charts showing traffic trends over 6 months with growth indicators
+- **Todo List** — Date-based task management
+- **Popular Content** — Content cards ranked by engagement with category labels
+- **Payments Table** — Sortable, paginated data table (36 records, 4 pages) with status badges (success, pending, failed), row selection, and action menus
+- **Collapsible Sidebar** — Toggle sidebar navigation for more screen space
+- **Dark / Light Mode** — Theme toggle with persistent preference
+- **Responsive Design** — Works on desktop, tablet, and mobile
+- **Image Optimization** — Using `next/image` for lazy loading and format conversion
+
+---
+
+## Tech Stack
+
+| Technology | Purpose |
+|-----------|---------|
+| **Next.js** | React framework with App Router and SSR |
+| **TypeScript** | Type-safe development (96.6% of codebase) |
+| **shadcn/ui** | Accessible, customizable component library |
+| **TailwindCSS** | Utility-first styling |
+| **Geist Font** | Vercel's modern typeface |
+| **pnpm** | Fast, disk-efficient package manager |
+| **Vercel** | Deployment and hosting |
+
+---
+
+## shadcn/ui Components Used
+
+Cards, Data Tables, Sidebar, Dropdown Menus, Avatars, Badges, Buttons, Charts, Pagination, Checkbox (row select), and Theme Toggle.
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Clone the repo
+git clone https://github.com/gypsicoder/dashboard-nextjs-shadcn.git
+cd dashboard-nextjs-shadcn
+
+# Install dependencies
+pnpm install
+
+# Run development server
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+dashboard-nextjs-shadcn/
+├── src/
+│   ├── app/           # Next.js App Router pages
+│   └── components/    # shadcn/ui and custom components
+├── public/            # Static assets
+├── components.json    # shadcn/ui configuration
+├── next.config.ts     # Next.js configuration
+├── tailwind.config.js # TailwindCSS configuration
+├── tsconfig.json      # TypeScript configuration
+└── package.json
+```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
